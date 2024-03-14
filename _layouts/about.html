@@ -6,6 +6,15 @@ layout: page
   <div class="profile col one {{ page.profile.align }}">
     {% if page.profile.image %}
       <img class="one" src="{{ page.profile.image | prepend: '/assets/img/' | prepend: site.baseurl | prepend: site.url }}">
+      <span style="font-size: 8pt; margin-top: 0pt; padding-top:0pt; line-height: 1;">Generated with a <a href="https://civitai.com/tag/lora">Pixelated-caveman LoRA</a></span>
+    {% endif %}
+    {% if page.profile.movie %}
+      <video class="profile" style="line-height: 1;" width="200" height="200" autoplay loop>
+        <source src="{{ page.profile.movie | prepend: '/assets/img/' | prepend: site.baseurl | prepend: site.url }}" type="video/mp4">
+      Your browser does not support the video tag.
+      </video>
+      <span style="font-size: 8pt; margin-top: 0pt; padding-top:0pt; line-height: 1;">Animation <a href="https://www.lumirithmic.com">credits</a></span>
+      <!-- <img class="one" > -->
     {% endif %}
     {% if page.profile.address %}
       <div class="address">
@@ -15,4 +24,7 @@ layout: page
   </div>
 {% endif %}
 
+<!-- This is the content in about.md -->
 {{ content }}
+
+

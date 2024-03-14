@@ -2,9 +2,32 @@
 layout: page
 permalink: /teaching/
 title: teaching
-description: Materials for courses you taught. Replace this text with your description.
+description: All course materials (in French) are available at the links below. Feel free to use. 
 ---
 
-For now, this page is assumed to be a static description of your courses. You can convert it to a collection similar to `_projects/` so that you can have a dedicated page for each course.
+<h3>MAT-2930 Algèbre linéaire appliquée</h3>
 
-Organize your courses by years, topics, or universities, however you like!
+<div class="flex-container">
+{% for teaching in site.data.teaching.mat2930 %}
+  {% include teaching.html teaching=teaching %}
+{% endfor %}
+</div>
+
+
+<h3>GIF-4105/7105 Photographie algorithmique</h3>
+
+<div class="flex-container">
+{% for teaching in site.data.teaching.gif4105 %}
+  {% include teaching.html teaching=teaching %}
+{% endfor %}
+</div>
+
+<h3>GIF-1001 Ordinateurs : structure et applications</h3>
+
+<div class="flex-container">
+{% for teaching in site.data.teaching.gif1001 %}
+  {% include teaching.html teaching=teaching %}
+{% endfor %}
+</div>
+
+

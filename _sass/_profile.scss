@@ -2,10 +2,11 @@
     img {
         box-shadow: 0 0 5px $grey-color;
         width: 100%;
+        border-radius: 50%;
     }
 }
 .address {
-    font-family: monospace;
+    /*font-family: monospace;*/
 
     p { margin: 0; }
 }
